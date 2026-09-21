@@ -1,0 +1,37 @@
+/* 飛行記録（DroneLogbook）のサポートページ。
+   アプリと同じ配色（AQUA）。審査は電話で見られるので、狭い幅でも読めるようにする。 */
+:root {
+  --bg: #f8fcff; --surface: #ffffff; --border: #d8dde6;
+  --text: #33333a; --text-sub: #6a6a72; --primary: #009dff; --accent: #086eac;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c1218; --surface: #151d26; --border: #27313c;
+    --text: #f0f2f7; --text-sub: #9fadbb; --primary: #39adff; --accent: #009dff;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 32px 20px 72px;
+  font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text);
+  background: var(--bg);
+}
+main { max-width: 680px; margin: 0 auto; }
+h1 { font-size: 1.6rem; margin: 0 0 4px; letter-spacing: .01em; }
+h2 { font-size: 1.1rem; margin: 40px 0 10px; padding-top: 18px; border-top: 1px solid var(--border); }
+h2:first-of-type { border-top: none; padding-top: 0; }
+h3 { font-size: .98rem; margin: 24px 0 6px; }
+p, li { margin: 10px 0; }
+ul { padding-left: 1.3em; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--primary); text-decoration-thickness: 2px; text-underline-offset: 2px; }
+.lede { color: var(--text-sub); margin-bottom: 28px; }
+.note { font-size: .9rem; color: var(--text-sub); }
+.box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin: 20px 0; }
+.box p:first-child { margin-top: 0; } .box p:last-child { margin-bottom: 0; }
+nav { margin-bottom: 28px; font-size: .92rem; }
+nav a { margin-right: 16px; }
+footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--border); font-size: .88rem; color: var(--text-sub); }
